@@ -1,0 +1,31 @@
+
+/* Custom styling for Sonner toast notifications */
+.sonner-toast {
+  @apply border border-gray-800/40 bg-gray-900/95 backdrop-blur-md shadow-xl rounded-xl;
+  animation: slide-in-right 0.3s ease-out forwards;
+}
+
+.sonner-toast[data-type="success"] {
+  @apply border-green-800/40 bg-green-900/90;
+}
+
+.sonner-toast[data-type="error"] {
+  @apply border-red-800/40 bg-red-900/90;
+}
+
+.sonner-toast-title {
+  @apply font-semibold text-white;
+}
+
+.sonner-toast-description {
+  @apply text-gray-200;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
